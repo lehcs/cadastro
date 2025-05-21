@@ -33,12 +33,3 @@ document.getElementById("add").addEventListener("click",() => {
         clientes.appendChild(cadastro);
     });
 });
-function remove(botao, id) {
-    fetch(`https://crudcrud.com/api/bf30286168b845328c0bf63122a9ff28/listadeclientes/${id}`, {
-        method: "DELETE"
-    })
-    .then(() => {
-        botao.parentElement.remove();
-    })
-    .catch(erro => alert.("Erro ao deletar:", erro));
-}
