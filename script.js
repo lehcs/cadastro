@@ -15,4 +15,11 @@ fetch("https://crudcrud.com/api/bf30286168b845328c0bf63122a9ff28/listadeclientes
 document.getElementById("add").addEventListener("click",() => {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
+    fetch("https://crudcrud.com/api/bf30286168b845328c0bf63122a9ff28/listadeclientes", {
+        method: "POST",
+        body: JSON.stringify({nome, email}),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
 });
