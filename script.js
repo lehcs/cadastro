@@ -22,4 +22,14 @@ document.getElementById("add").addEventListener("click",() => {
             "Content-Type": "application/json"
         }
     })
+    .then(resposta => resposta.json())
+    .then((cliente) => {
+        const cadastro = document.createElement("li");
+        cadastro.innerHTML = `
+            <h3>${cliente.nome}</h3>
+            <p>${cliente.email}</p>
+            <button onclick="remove(${cliente._id})">X</button>
+        `;
+        clientes.appendChild(cadastro);
+    });
 });
