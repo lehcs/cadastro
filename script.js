@@ -7,7 +7,6 @@ fetch("https://crudcrud.com/api/bf30286168b845328c0bf63122a9ff28/listadeclientes
         cadastro.innerHTML = `
             <h3>${cliente.nome}</h3>
             <p>${cliente.email}</p>
-            <button onclick="remove(${cliente._id})">X</button>
         `;
         clientes.appendChild(cadastro);
     });
@@ -28,7 +27,6 @@ document.getElementById("add").addEventListener("click",() => {
         cadastro.innerHTML = `
             <h3>${cliente.nome}</h3>
             <p>${cliente.email}</p>
-            <button onclick="remove(${cliente._id})">X</button>
         `;
         clientes.appendChild(cadastro);
     });
