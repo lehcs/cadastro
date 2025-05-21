@@ -40,5 +40,5 @@ function remove(botao, id) {
     .then(() => {
         botao.parentElement.remove();
     })
-    .catch(erro => alert.("Erro ao deletar:", erro));
+    .catch(erro => alert("Erro ao deletar: " + erro));
 }
